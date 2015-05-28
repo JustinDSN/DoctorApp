@@ -76,9 +76,16 @@
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Create Case" id="Tua-bm-KGc"/>
+                    <navigationItem key="navigationItem" title="Create Case" id="Tua-bm-KGc">
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="VzD-H4-sgj">
+                            <connections>
+                                <action selector="sendCase:" destination="BYZ-38-t0r" id="zQ8-Zg-QUt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="descriptionTextView" destination="ebG-OW-rhT" id="lba-ky-QOq"/>
                         <outlet property="imageView" destination="R6U-JJ-gHZ" id="Rg0-b9-J2c"/>
                     </connections>
                 </viewController>

@@ -13,6 +13,7 @@
 		D7FA39DC1B16927900D43DA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FA39DB1B16927900D43DA4 /* Images.xcassets */; };
 		D7FA39DF1B16927900D43DA4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FA39DD1B16927900D43DA4 /* LaunchScreen.xib */; };
 		D7FA39EB1B16927900D43DA4 /* DoctorAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FA39EA1B16927900D43DA4 /* DoctorAppTests.swift */; };
+		D7FA39F51B16A00900D43DA4 /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FA39F41B16A00900D43DA4 /* Case.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		D7FA39E41B16927900D43DA4 /* DoctorAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoctorAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7FA39E91B16927900D43DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7FA39EA1B16927900D43DA4 /* DoctorAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAppTests.swift; sourceTree = "<group>"; };
+		D7FA39F41B16A00900D43DA4 /* Case.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				D7FA39DB1B16927900D43DA4 /* Images.xcassets */,
 				D7FA39DD1B16927900D43DA4 /* LaunchScreen.xib */,
 				D7FA39D21B16927900D43DA4 /* Supporting Files */,
+				D7FA39F41B16A00900D43DA4 /* Case.swift */,
 			);
 			path = DoctorApp;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7FA39D71B16927900D43DA4 /* ViewController.swift in Sources */,
+				D7FA39F51B16A00900D43DA4 /* Case.swift in Sources */,
 				D7FA39D51B16927900D43DA4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +415,7 @@
 				D7FA39F01B16927900D43DA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7FA39F11B16927900D43DA4 /* Build configuration list for PBXNativeTarget "DoctorAppTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				D7FA39F31B16927900D43DA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

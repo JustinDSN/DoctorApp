@@ -10,9 +10,11 @@ import UIKit
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    var currentCase = Case()
     
     @IBOutlet weak var imageView: UIImageView!
-
+    @IBOutlet weak var descriptionTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -40,6 +42,11 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         self.presentViewController(imagePicker, animated: true, completion: nil);
     }
     
+    @IBAction func sendCase(sender: AnyObject) {
+        println("sendCase")
+        self.currentCase.description = self.descriptionTextView.text
+    }
+    
     func viewTapped() {
         self.view.endEditing(true)
     }
@@ -51,6 +58,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         
         self.dismissViewControllerAnimated(true, completion: nil)
         
+        self.currentCase.image = image
         self.imageView.image = image
     }
     
