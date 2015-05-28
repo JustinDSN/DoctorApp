@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,5 +21,30 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func takePicture(sender: AnyObject) {
+        let imagePicker = UIImagePickerController()
+        
+        if (UIImagePickerController.isSourceTypeAvailable(.Camera)) {
+            imagePicker.sourceType = .Camera
+        } else {
+            imagePicker.sourceType = .PhotoLibrary
+        }
+        
+        imagePicker.delegate = self;
+        
+        self.presentViewController(imagePicker, animated: true, completion: nil);
+    }
+    
+    //MARK: UIImagePickerControllerDelegate
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        println("didFinishPickingImage")
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        println("imagePickerControllerDidCancel")
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
 
