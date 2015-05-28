@@ -16,6 +16,9 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "viewTapped")
+        self.view.addGestureRecognizer(tapGestureRecognizer);
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,10 +40,15 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         self.presentViewController(imagePicker, animated: true, completion: nil);
     }
     
+    func viewTapped() {
+        self.view.endEditing(true)
+    }
+    
     //MARK: UIImagePickerControllerDelegate
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         println("didFinishPickingImage")
+        
         self.dismissViewControllerAnimated(true, completion: nil)
         
         self.imageView.image = image
