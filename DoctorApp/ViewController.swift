@@ -9,6 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    
+    @IBOutlet weak var imageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +22,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
     @IBAction func takePicture(sender: AnyObject) {
         let imagePicker = UIImagePickerController()
@@ -40,6 +42,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         println("didFinishPickingImage")
         self.dismissViewControllerAnimated(true, completion: nil)
+        
+        self.imageView.image = image
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
